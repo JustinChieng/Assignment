@@ -13,22 +13,29 @@
         <?php endif; ?>
     </div>
 
-<div class="container mx-auto my-5" style="max-width: 500px;">
-    <h1 class="h1 mb-4 text-center">Happy Moment sharing corner</h1>
-    <?php foreach( POST::getPublishPosts() as $post): ?>
-    <div class="card mb-2">
-        <div class="card-body">
-            <h5 class="card-title"><?php echo $post['title'] ?></h5>
-            <p class="card-text"><?php echo substr($post['content'],0,100); ?></p>
-            <div class="text-end">
-                <a href="/post?id=<?php echo $post['id']; ?>" class="btn btn-primary btn-sm">Read More</a>
+    <div class="home py-5">
+      <div class="container">
+        <div class="row">
+        <?php foreach( Post::getPublishPosts() as $post ) : ?>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card mb-5 shadow-sm" style="border: 2px solid maroon;">
+            <div class="card-body">
+              <div class="card-title">
+                <h2><?php echo $post['title']; ?></h2>
+              </div>
+              <div class="card-text">
+                <p>
+                <?php echo substr($post['content'], 0, 50); ?> ...
+                </p>
+              </div>
+              <a href="/post?id=<?php echo $post['id']; ?>" class="btn btn-primary btn-sm">Read More</a>
             </div>
+          </div>
         </div>
-    </div>
-    <?php endforeach ?>
+        <?php endforeach; ?>
+      </div>
+    </div>
 
-   
-</div>
 <?php
 
     require dirname(__DIR__) . '/parts/footer.php';
