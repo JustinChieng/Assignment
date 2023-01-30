@@ -14,7 +14,7 @@
     />
     <style type="text/css">
       body {
-        background: #f1f1f1;
+        background: rgba(150, 50, 113, 0.3);
       }
     </style>
   </head>

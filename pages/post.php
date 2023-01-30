@@ -30,7 +30,7 @@
 
     ?>
     <div class="text-center mt-3">
-        <a href="/index" class="btn btn-link btn-sm"><i class="bi bi-arrow-left"></i> Back</a>
+        <a href="/index" class="btn btn-primary btn-sm"><i class="bi bi-arrow-left"></i> Back</a>
     </div>
 </div>
 
